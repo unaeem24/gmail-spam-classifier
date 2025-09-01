@@ -6,7 +6,20 @@ vectorizer = joblib.load("tfidf_vectorizer.joblib")
 
 # Example: Replace this with your email text
 new_email = """
-Congratulations! You've won a $1000 gift card. Click here to claim your prize: http://spamlink.com
+From: "University Registrar" <registrar@university.edu>
+To: you@example.com
+Subject: Upcoming Exam Schedule
+
+Dear Student,
+
+Please find attached the exam schedule for the Fall semester. Make sure to review the dates and prepare accordingly.
+
+If you have any questions, feel free to contact the registrar's office.
+
+Best regards,
+University Registrar
+
+
 """
 
 # If you have a preprocessor, use it here (optional)
