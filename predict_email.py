@@ -6,6 +6,7 @@ vectorizer = joblib.load("tfidf_vectorizer.joblib")
 
 # Example: Replace this with your email text
 new_email = """
+<<<<<<< HEAD
 From: "University Registrar" <registrar@university.edu>
 To: you@example.com
 Subject: Upcoming Exam Schedule
@@ -20,6 +21,9 @@ Best regards,
 University Registrar
 
 
+=======
+Congratulations! You've won a $1000 gift card. Click here to claim your prize: http://spamlink.com
+>>>>>>> e716f77073d2f53e33f5f733a04aba61b70601a3
 """
 
 # If you have a preprocessor, use it here (optional)

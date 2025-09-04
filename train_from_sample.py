@@ -13,8 +13,13 @@ class EmailClassifierTrainer:
     def __init__(self):
         self.models = {
             'random_forest': RandomForestClassifier(n_estimators=100, random_state=42),
+<<<<<<< HEAD
             # 'naive_bayes': MultinomialNB(),
             # 'svm': SVC(kernel='linear', probability=True, random_state=42),
+=======
+            'naive_bayes': MultinomialNB(),
+            'svm': SVC(kernel='linear', probability=True, random_state=42),
+>>>>>>> e716f77073d2f53e33f5f733a04aba61b70601a3
             'logistic_regression': LogisticRegression(max_iter=1000, random_state=42)
         }
         self.best_model = None
@@ -53,6 +58,7 @@ class EmailClassifierTrainer:
                 'max_depth': [None, 10, 20],
                 'min_samples_split': [2, 5, 10]
             },
+<<<<<<< HEAD
             # 'naive_bayes': {
             #     'alpha': [0.1, 0.5, 1.0, 2.0]
             # },
@@ -60,6 +66,15 @@ class EmailClassifierTrainer:
             #     'C': [0.1, 1, 10],
             #     'kernel': ['linear', 'rbf']
             # },
+=======
+            'naive_bayes': {
+                'alpha': [0.1, 0.5, 1.0, 2.0]
+            },
+            'svm': {
+                'C': [0.1, 1, 10],
+                'kernel': ['linear', 'rbf']
+            },
+>>>>>>> e716f77073d2f53e33f5f733a04aba61b70601a3
             'logistic_regression': {
                 'C': [0.1, 1, 10],
                 'solver': ['liblinear', 'lbfgs']
@@ -132,5 +147,9 @@ if __name__ == "__main__":
 
     trainer = EmailClassifierTrainer()
     trainer.train(X_train, y_train)
+<<<<<<< HEAD
     trainer.evaluate(trainer.best_model, X_test, y_test, class_names=["not spam", "spam"])
 
+=======
+    trainer.evaluate(trainer.best_model, X_test, y_test, class_names=["not spam", "spam"])
+>>>>>>> e716f77073d2f53e33f5f733a04aba61b70601a3
