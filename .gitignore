@@ -1,4 +1,6 @@
 credentials.json
 token.pickle
 token.json
+*.joblib
+*.csv
 
